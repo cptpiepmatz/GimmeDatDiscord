@@ -12,7 +12,7 @@ globalThis.client = new Client(clientOptions);
 const client = globalThis.client;
 
 client.once("ready", () => {
-  console.log("ready");
+  console.log("Client started successfully.");
 });
 
 client.on("interactionCreate", async interaction => {
