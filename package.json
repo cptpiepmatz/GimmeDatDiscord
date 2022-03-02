@@ -1,7 +1,7 @@
 {
   "name": "gimme-dat-discord",
   "version": "0.1.0",
-  "description": "",
+  "description": "Discord Bot to get User Profile, Emoji or Sticker Pictures",
   "main": "out/app.js",
   "type": "module",
   "scripts": {
@@ -15,8 +15,8 @@
     "type": "git",
     "url": "git+https://github.com/cptpiepmatz/GimmeDatDiscord.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Tim 'Piepmatz' Hesse",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/cptpiepmatz/GimmeDatDiscord/issues"
   },
