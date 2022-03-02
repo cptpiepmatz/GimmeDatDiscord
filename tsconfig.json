@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "es2022",
+    "target": "ES2021",
+    "sourceMap": true,
+    "outDir": "out",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
