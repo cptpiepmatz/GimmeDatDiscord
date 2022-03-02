@@ -31,7 +31,12 @@ function createPayload(
   buttons: Record<string, string>,
   forInteraction = true
 ): InteractionReplyOptions | MessageOptions {
-  let embeds = [new Embed().setTitle(displayName).setDescription(imageUrl)];
+  let embeds = [
+    new Embed()
+      .setTitle(displayName)
+      .setDescription(imageUrl)
+      .setColor(parseInt("C0271A", 16))
+  ];
   let componentButtons = [];
   for (let [key, value] of Object.entries(buttons)) {
     componentButtons.push(
