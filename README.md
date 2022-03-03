@@ -22,7 +22,7 @@ Right-clicking a profile picture lets you get the profile picture url.
 Right-Click on Profile Picture -> Apps -> Gimme Dat
 
 <p align="center">
-<img alt="showcase context profile picture" src="./showcase/context-profile.gif"/>
+<img height="500px" alt="showcase context profile picture" src="./showcase/context-profile.gif"/>
 </p>
 
 # Get Emoji Pictures
@@ -32,7 +32,7 @@ url.
 Right-Click on Message-> Apps -> Gimme Dat
 
 <p align="center">
-<img alt="showcase context emoji picture" src="./showcase/context-emojis.gif"/>
+<img height="500px" alt="showcase context emoji picture" src="./showcase/context-emojis.gif"/>
 </p>
 
 # Get Sticker Pictures
@@ -42,7 +42,7 @@ url.
 Right-Click on Message-> Apps -> Gimme Dat
 
 <p align="center">
-<img alt="showcase context sticker picture" src="./showcase/context-sticker.gif"/>
+<img height="500px" alt="showcase context sticker picture" src="./showcase/context-sticker.gif"/>
 </p>
 
 # DM the Bot
@@ -50,7 +50,7 @@ One can also directly message the bot with an emoji or sticker to get the
 picture url.
 
 <p align="center">
-<img alt="showcase dm" src="./showcase/dm.gif"/>
+<img height="500px" alt="showcase dm" src="./showcase/dm.gif"/>
 </p>
 
 # Invite the Bot
