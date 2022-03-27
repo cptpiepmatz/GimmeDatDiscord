@@ -1,10 +1,11 @@
-import {Client, ContextMenuInteraction} from "discord.js";
+import {Client, CommandInteraction, ContextMenuInteraction} from "discord.js";
 import {createRequire} from "module";
 
 import clientOptions from "./clientOptions.js";
 import handleContextMenuInteraction
   from "./functions/handleContextMenuInteraction.js";
 import handleDM from "./functions/handleDM.js";
+import handleCommandInteraction from "./functions/handleCommandInteraction.js";
 
 const {token} = createRequire(import.meta.url)("../config.json");
 
@@ -16,10 +17,12 @@ client.once("ready", () => {
 });
 
 client.on("interactionCreate", async interaction => {
-  if (!interaction.isContextMenu()) return;
-  const cmInteraction = interaction as ContextMenuInteraction;
-
-  await handleContextMenuInteraction(interaction);
+  if (interaction.isContextMenu()) {
+    await handleContextMenuInteraction(interaction as ContextMenuInteraction);
+  }
+  if (interaction.isCommand()) {
+    await handleCommandInteraction(interaction as CommandInteraction);
+  }
 });
 
 client.on("messageCreate", async message => {

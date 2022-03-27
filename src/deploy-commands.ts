@@ -3,7 +3,13 @@
  * This file is used to deploy the commands the bot should have.
  */
 
-import {ContextMenuCommandBuilder} from "@discordjs/builders";
+import {
+  ContextMenuCommandBuilder,
+  SlashCommandBuilder,
+  SlashCommandSubcommandBuilder,
+  SlashCommandIntegerOption,
+  SlashCommandUserOption, SlashCommandStringOption
+} from "@discordjs/builders";
 import {Client} from "discord.js";
 import {createRequire} from "module";
 
@@ -20,7 +26,36 @@ const commands = [
   // "Gimme Dat" on messages
   new ContextMenuCommandBuilder()
     .setName("Gimme Dat")
-    .setType(3) // MESSAGE
+    .setType(3), // MESSAGE
+
+  new SlashCommandBuilder()
+    .setName("gimme")
+    .setDescription("Entry point for the GimmeDat bot.")
+    .addSubcommand(
+      new SlashCommandSubcommandBuilder()
+        .setName("dat")
+        .setDescription("Fetches some data.")
+        .addUserOption(
+          new SlashCommandUserOption()
+            .setName("user")
+            .setDescription("User to fetch avatar from.")
+        )
+        .addStringOption(
+          new SlashCommandStringOption()
+            .setName("user_id")
+            .setDescription("ID of the user to fetch avatar from.")
+        )
+        .addStringOption(
+          new SlashCommandStringOption()
+            .setName("guild_id")
+            .setDescription("ID of the guild to fetch avatar from.")
+        )
+        .addStringOption(
+          new SlashCommandStringOption()
+            .setName("server_id")
+            .setDescription("ID of the server to fetch avatar from.")
+        )
+    )
 
 ].map(command => command.toJSON());
 

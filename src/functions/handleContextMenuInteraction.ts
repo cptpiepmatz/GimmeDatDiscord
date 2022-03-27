@@ -4,6 +4,7 @@ import createPayload from "./createPayload.js";
 import replyOrFollowUp from "./replyOrFollowUp.js";
 import extractStickerData from "./extractStickerData.js";
 import extractEmojiData from "./extractEmojiData.js";
+import prepareAvatars, {avatarSize} from "./prepareAvatars.js";
 
 /**
  * Function to handle context menu interactions.
@@ -24,27 +25,10 @@ async function handleUserType(interaction: ContextMenuInteraction) {
   let user = await globalThis.client.users.fetch(interaction.targetId);
   let userAvatar = user.displayAvatarURL({dynamic: true});
 
-  const size = "?size=4096";
-  function prepareButtons(avatarUrl: string) {
-    let buttons: Record<string, string> = {};
-    if (avatarUrl.endsWith(".webp")) {
-      buttons["webp"] = avatarUrl + size;
-      buttons["png"] = avatarUrl.replace(".webp", ".png") + size;
-    }
-    if (avatarUrl.endsWith(".png")) {
-      buttons["png"] = avatarUrl + size;
-    }
-    if (avatarUrl.endsWith(".gif")) {
-      buttons["gif"] = avatarUrl + size;
-      buttons["png"] = avatarUrl.replace(".gif", ".png") + size;
-    }
-    return buttons;
-  }
-
   await replyOrFollowUp(interaction, createPayload(
     user.username,
-    userAvatar + size,
-    prepareButtons(userAvatar)
+    userAvatar + avatarSize,
+    prepareAvatars(userAvatar)
   ));
 
   if (interaction.guild) {
@@ -54,8 +38,8 @@ async function handleUserType(interaction: ContextMenuInteraction) {
     if (memberAvatar !== userAvatar) {
       await replyOrFollowUp(interaction, createPayload(
         member.displayName,
-        memberAvatar + size,
-        prepareButtons(memberAvatar)
+        memberAvatar + avatarSize,
+        prepareAvatars(memberAvatar)
       ));
     }
   }

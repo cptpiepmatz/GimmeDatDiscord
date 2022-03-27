@@ -9,7 +9,9 @@ async function replyOrFollowUp(
   interaction: BaseCommandInteraction,
   reply: Parameters<BaseCommandInteraction["reply"]>[0]
 ) {
-  if (interaction.replied) return interaction.followUp(reply);
+  if (interaction.replied || interaction.deferred) {
+    return interaction.followUp(reply);
+  }
   return interaction.reply(reply);
 }
 
