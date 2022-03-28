@@ -11,9 +11,15 @@
 <br>
 
 <p align="center">
-<img alt="Version" src="https://img.shields.io/github/package-json/v/cptpiepmatz/GimmeDatDiscord?style=for-the-badge&color=C0271A"/>
-<img alt="Discord.js Dependency" src="https://img.shields.io/github/package-json/dependency-version/cptpiepmatz/GimmeDatDiscord/discord.js?color=5865F2&style=for-the-badge">
-<img alt="LICENSE" src="https://img.shields.io/github/license/cptpiepmatz/GimmeDatDiscord?style=for-the-badge">
+<a href="https://github.com/cptpiepmatz/GimmeDatDiscord">
+  <img alt="Version" src="https://img.shields.io/github/package-json/v/cptpiepmatz/GimmeDatDiscord?style=for-the-badge&color=C0271A"/>
+</a>
+<a href="https://discord.js.org/" target="_blank">
+  <img alt="Discord.js Dependency" src="https://img.shields.io/github/package-json/dependency-version/cptpiepmatz/GimmeDatDiscord/discord.js?color=5865F2&style=for-the-badge">
+</a>
+<a href="https://github.com/cptpiepmatz/GimmeDatDiscord/blob/main/LICENSE">
+  <img alt="LICENSE" src="https://img.shields.io/github/license/cptpiepmatz/GimmeDatDiscord?style=for-the-badge">
+</a>
 </p>
 
 # Get User Profile Pictures
