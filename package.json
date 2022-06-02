@@ -1,6 +1,6 @@
 {
   "name": "gimme-dat-discord",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Discord Bot to get User Profile, Emoji or Sticker Pictures",
   "main": "out/app.js",
   "type": "module",

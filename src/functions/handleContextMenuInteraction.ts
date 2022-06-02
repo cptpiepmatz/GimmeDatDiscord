@@ -22,7 +22,10 @@ async function handleContextMenuInteraction(interaction: ContextMenuInteraction)
  * @param interaction - A context menu interaction
  */
 async function handleUserType(interaction: ContextMenuInteraction) {
-  let user = await globalThis.client.users.fetch(interaction.targetId);
+  let isDm = interaction.channel.type === "DM";
+
+  await interaction.deferReply({ephemeral: !isDm});
+  let user = await globalThis.client.users.fetch(interaction.targetId, true);
   let userAvatar = user.displayAvatarURL({dynamic: true});
 
   await replyOrFollowUp(interaction, createPayload(
@@ -50,6 +53,8 @@ async function handleUserType(interaction: ContextMenuInteraction) {
  * @param interaction - A context menu interaction
  */
 async function handleMessageType(interaction: ContextMenuInteraction) {
+  let isDm = interaction.channel.type === "DM";
+
   let channel = await interaction.channel.fetch();
   let message = await channel.messages.fetch(interaction.targetId);
 
@@ -77,7 +82,7 @@ async function handleMessageType(interaction: ContextMenuInteraction) {
 
   if (!interaction.replied) {
     await interaction.reply({
-      ephemeral: true,
+      ephemeral: !isDm,
       content: "Found nothing to give ya. :/"
     });
   }
