@@ -10,17 +10,14 @@
 
 <br>
 
-<p align="center">
-<a href="https://github.com/cptpiepmatz/GimmeDatDiscord">
-  <img alt="Version" src="https://img.shields.io/github/package-json/v/cptpiepmatz/GimmeDatDiscord?style=for-the-badge&color=C0271A"/>
-</a>
-<a href="https://discord.js.org/" target="_blank">
-  <img alt="Discord.js Dependency" src="https://img.shields.io/github/package-json/dependency-version/cptpiepmatz/GimmeDatDiscord/discord.js?color=5865F2&style=for-the-badge">
-</a>
-<a href="https://github.com/cptpiepmatz/GimmeDatDiscord/blob/main/LICENSE">
-  <img alt="LICENSE" src="https://img.shields.io/github/license/cptpiepmatz/GimmeDatDiscord?style=for-the-badge">
-</a>
-</p>
+<div align="center">
+
+  [![Version](https://img.shields.io/github/package-json/v/cptpiepmatz/GimmeDatDiscord?style=for-the-badge&color=C0271A)](https://github.com/cptpiepmatz/GimmeDatDiscord)
+  [![Discord.js Dependency](https://img.shields.io/github/package-json/dependency-version/cptpiepmatz/GimmeDatDiscord/discord.js?color=5865F2&style=for-the-badge)](https://discord.js.org/)
+  [![LICENSE](https://img.shields.io/github/license/cptpiepmatz/GimmeDatDiscord?style=for-the-badge)](https://github.com/cptpiepmatz/GimmeDatDiscord/blob/main/LICENSE)
+
+</div>
+
 
 # Get User Profile Pictures
 Right-clicking a profile picture lets you get the profile picture url.
