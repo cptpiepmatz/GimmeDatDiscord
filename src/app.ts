@@ -7,7 +7,8 @@ import handleContextMenuInteraction
 import handleDM from "./functions/handleDM.js";
 import handleCommandInteraction from "./functions/handleCommandInteraction.js";
 
-const {token} = createRequire(import.meta.url)("../config.json");
+const token = process.env.DISCORD_TOKEN;
+if (!token) throw new Error("Missing DISCORD_TOKEN env variable");
 
 globalThis.client = new Client(clientOptions);
 const client = globalThis.client;

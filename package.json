@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "start": "node --experimental-json-modules .",
+    "start": "node .",
     "build'n'start": "npm run build && npm run start",
     "deploy-commands": "node out/deploy-commands.js",
     "build'n'deploy-commands": "npm run build && npm run deploy-commands"
